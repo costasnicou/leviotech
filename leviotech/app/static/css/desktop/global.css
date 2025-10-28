@@ -1,0 +1,139 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(64, 64, 64); */
+     font-family: "Lato", sans-serif;
+}
+
+.header-complete{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+.header-top-bar{
+    /* background-color: rgb(237, 188, 104); */
+    height: 100px;
+    border-bottom: 1px solid black;
+    background-color: rgb(254, 254, 254);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.welcome-msg{
+    font-size: 17px;
+}
+.logo-img{
+    height: 60px;
+    width: 220px;
+    margin-left: 200px;
+   
+}
+
+.contact-header{
+    display: flex;
+    padding: 20px 150px 20px 20px;
+    flex-direction: column;
+
+}
+
+.contact-header > *{
+    margin: 2px;
+    font-size: 15px;
+
+}
+
+.header-menu{
+    height: 40px;
+    background-color: #258ce1;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.menu li{
+    margin: 2.5px 0;
+    border-right: 1px solid white;
+    padding: 0 10px;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+.menu li:last-child{
+    border-right: none;
+}
+
+
+
+.menu li a:hover{
+    color: white;
+    background-color: rgb(34, 133, 220);
+    padding: 20px 40px;
+    border-radius: 20px;
+    border-bottom: 1px solid white;
+}
+
+section{
+    padding: 20px;
+    text-align: center;
+}
+/* end featured categories */
+/* 
+main{
+    height: 2000px;
+} */
+
+
+.view-more{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #5f9fd3;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.product-view-more{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #5f9fd3;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: -5px;
+}
+.product-view-more:hover,.view-more:hover{
+    background-color: #5188b5;
+}
+
+.section-title{
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(156, 156, 156);
+    display: inline-block;
+    color: #258ce1;
+}
+
+.wraper-width{
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer{
+    height: 400px;
+    background-color: #258ce1;
+}

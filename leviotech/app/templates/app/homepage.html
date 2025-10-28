@@ -1,0 +1,254 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block metatitle %}
+ <title>Leviotech - Homepage</title>
+{% endblock %}
+{% block css %}
+ <link rel="stylesheet" href="{% static 'css/desktop/homepage.css' %}">
+{% endblock %}
+{% block hero %}
+    <div class="slider">
+        <div class="slides">
+            <div class="slide slide1 ">
+                <hgroup>
+                    <h1 class="heading">Unlock Your True Potential</h1>
+                    <h2 class="sub-heading">Every great journey begins with a single decision. Start yours today.</h2>
+                </hgroup>
+            </div>
+
+            <div class="slide slide2" >
+                <hgroup>
+                    <h1 class="heading">Fuel Your Mind. Transform Your Life.</h1>
+                    <h2 class="sub-heading">Empower yourself with knowledge, discipline, and daily growth.</h2>
+                </hgroup>
+                
+            </div>
+            <div class="slide slide3" >
+                <hgroup>
+                    <h1 class="heading">Rise Above Limits</h1>
+                    <h2 class="sub-heading">Break free from doubt and step boldly into your greatness.</h2>
+                </hgroup>            
+            </div>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+{% endblock %}
+
+{% block main %}
+   <section class="featured-categories">
+            
+            <div class="featured-categories-wraper">
+                <div class="featured-category-wraper">
+                    <h4>Gaming Laptops</h4>
+                    <div class="featured-category">
+                        <img src="{% static 'imgs/featured-categories/laptops.jpg' %}" alt="">
+                        <p><span class="enthousiasm">Next-Level</span> Performance Awaits — <span class="enthousiasm">Buy Now!</span>
+                         <a href="" class="view-more">View More</a>
+                        </p>
+                    
+                    </div>
+                </div>
+               
+
+                <div class="featured-category-wraper">
+                    <h4>Gaming Keyboards</h4>
+                    <div class="featured-category">
+                        <img src="{% static 'imgs/featured-categories/keyboards.jpg' %}" alt="">
+                        <p>Feel the <span class="enthousiasm">Power</span> in Every <span class="enthousiasm">Keystroke</span> — Shop Now!
+                         <a href="" class="view-more">View More</a>
+                        </p>
+                    
+                    </div>
+                </div>
+
+                <div class="featured-category-wraper">
+                    <h4>Gaming Headset</h4>
+                    <div class="featured-category">
+                        <img src="{% static 'imgs/featured-categories/headset.jpg' %}" alt="">
+                        <p>Step Into the <span class="enthousiasm">Sound of Victory</span> — Get Yours <span class="enthousiasm">Today!</span>
+                        <a href="" class="view-more">View More</a>
+                        </p>
+                    
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <section class="featured-products">
+        <img src="{% static 'imgs/gamer-transparent.png' %}" alt="">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="featured-products-wraper wraper-width">
+            {% for featured_product in featured_products %}
+                <div class="product">
+                    {% if featured_product.get_featured_image %}
+                    <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                    {% endif %}
+                    <p class="product-title">{{ featured_product.title }}</p>
+                    <a class="product-view-more" href="{% url 'product_detail' slug=featured_product.slug %}"  class="amz-link">View More</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="call-to-action">
+       <h3>Get the Gear. Dominate the Game!</h3>
+    </section>
+
+    <section class="best-deals">
+        <img class="left-bg-opacity" src="{% static 'imgs/gamer-transparent.png' %}" alt="">
+        <h2 class="section-title">Best Deals</h2>
+        <div class="best-deals-wrapper wraper-width">
+            <div class="best-deals-left">
+                {% for first_four_best_deal in first_four_best_deals %}
+                <div class="product">
+                    {% if first_four_best_deal.get_featured_image %}
+                        <img class="product-img" src="{{ first_four_best_deal.get_featured_image.image.url }}" alt="{{ first_four_best_deal.title }}">
+                    {% endif %}
+                    
+                    <p class="product-title">{{ first_four_best_deal.title }}</p>
+                    <a class="product-view-more" href="{% url 'product_detail' slug=first_four_best_deal.slug %} ">View More</a>
+                </div>
+
+                {% endfor  %}
+               
+            </div>
+
+            <div class="best-deals-center">
+                <div class="product">
+                    {% if best_deal_star.get_featured_image %}
+                        <img class="product-img" src="{{ best_deal_star.get_featured_image.image.url }}" alt="{{ best_deal_star.title }}">
+                    {% endif %}
+                    
+                    <p class="product-title">{{ best_deal_star.title }}</p>
+                    <a class="product-view-more" href="{% url 'product_detail' slug=best_deal_star.slug %}">View More</a>
+                </div>
+            </div>
+
+            <div class="best-deals-right">
+               {% for last_four_best_deal in last_four_best_deals %}
+                <div class="product">
+                     {% if last_four_best_deal.get_featured_image %}
+                    <img class="product-img" src="{{ last_four_best_deal.get_featured_image.image.url }}" alt="{{ last_four_best_deal.title }}">
+                    {% endif %}
+                    
+                    <p class="product-title">{{ last_four_best_deal.title }}</p>
+                    <a class="product-view-more" href="{% url 'product_detail' slug=last_four_best_deal.slug %}" class="amz-link">View More</a>
+                </div>
+
+                {% endfor  %}
+            </div>
+            
+        </div>
+        <img class="right-bg-opacity" src="{% static 'imgs/gamer-transparent.png' %}" alt="">
+    </section>
+
+    <section class="tabbed-categories">
+        <h2 class="section-title">Products by Category</h2>
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="tab1">Laptops</button>
+                <button class="tab-btn" data-tab="tab2">PC'</button>
+                <button class="tab-btn" data-tab="tab3">keyboards</button>
+                <button class="tab-btn" data-tab="tab4">Mouse</button>
+                <button class="tab-btn" data-tab="tab5">Headset</button>
+                <button class="tab-btn" data-tab="tab6">Gaming Chairs</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="tab1" class="laptops-tab tab-pane active">
+                    <div class="tab-wraper">
+                        {% for featured_product in featured_products %}
+                            <div class="product">
+                                {% if featured_product.get_featured_image %}
+                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ featured_product.title }}</p>
+                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="tab2" class="pc-tab tab-pane">
+                        <div class="tab-wraper">
+                            {% for featured_product in featured_products %}
+                            <div class="product">
+                                {% if featured_product.get_featured_image %}
+                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ featured_product.title }}</p>
+                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="tab3" class="keyboards-tab tab-pane">
+                        <div class="tab-wraper">
+                        {% for featured_product in featured_products %}
+                            <div class="product">
+                                {% if featured_product.get_featured_image %}
+                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ featured_product.title }}</p>
+                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="tab4" class="mouse-tab tab-pane">
+                    <div class="tab-wraper">
+                            {% for featured_product in featured_products %}
+                            <div class="product">
+                                {% if featured_product.get_featured_image %}
+                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ featured_product.title }}</p>
+                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="tab5" class="headset-tab tab-pane">
+                    <div class="tab-wraper">
+                    {% for featured_product in featured_products %}
+                        <div class="product">
+                            {% if featured_product.get_featured_image %}
+                            <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                            {% endif %}
+                            <p class="product-title">{{ featured_product.title }}</p>
+                            <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                        </div>
+                    {% endfor %}
+                        </div>
+                </div>
+
+                <div id="tab6" class="gaming-chairs-tab tab-pane">
+                    <div class="tab-wraper">
+                        {% for featured_product in featured_products %}
+                            <div class="product">
+                                {% if featured_product.get_featured_image %}
+                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ featured_product.title }}</p>
+                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/tabs.js' %}"></script>
+{% endblock %}

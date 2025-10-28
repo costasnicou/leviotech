@@ -1,0 +1,49 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block metatitle %}
+ <title>Leviotech - {{product.title}}</title>
+{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/desktop/single-product.css' %}">
+{% endblock %}
+
+{% block hero %}
+   <div class="beadcrumb">
+        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'product_detail' slug=product.slug %}">{{product.title}}</a> </p>
+   </div>
+
+{% endblock %}
+
+{% block main %}
+<section class="product-details-section">
+    <h2 class="section-title product-title">{{product.title}}</h2>
+    <div class="product-details wraper-width">
+        <div class="product-images">
+            <div class="all-product-images">
+                {% for product_image in product.images.all %}
+                    <img class="product-image" src="{{product_image.image.url}}" alt="">
+                {% endfor %}
+            </div>
+
+            <div class="featured-div">
+                 <img class="featured-image" src="{{ product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+            </div>
+        </div>
+
+        <div class="product-description">
+            <article class="description-article">
+                {{ product.description|safe }}
+               
+            </article>
+
+            <a class="view-more amz-link" target="_blank" href="{{product.affiliate_url}}">View on Amazon</a>
+        </div>
+    </div>
+ 
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/img-selection.js' %}"></script>
+{% endblock %}

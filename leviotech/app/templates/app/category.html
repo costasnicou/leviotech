@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block metatitle %}
+ <title>Leviotech - {{category.name}}</title>
+{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/desktop/category.css' %}">
+{% endblock %}
+
+{% block hero %}
+   <div class="beadcrumb">
+        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'category_detail' slug=category.slug %}">{{category.name}}</a> </p>
+   </div>
+
+
+{% endblock %}
+
+{% block main %}
+<!-- <h1></h1> -->
+<section class="category-products">
+    <h2 class="section-title">{{category.name}}</h2>
+    <div class="category-products-wraper wraper-width">
+        {% for related_product in related_products %}
+            <div class="product">
+                {% if related_product.get_featured_image %}
+                <img class="product-img" src="{{ related_product.get_featured_image.image.url }}" alt="{{ related_product.title }}">
+                {% endif %}
+                <p class="product-title">{{ related_product.title }}</p>
+                <a class="product-view-more" href="{% url 'product_detail' slug=related_product.slug %}">View More</a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

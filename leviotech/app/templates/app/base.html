@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d495971c43.js" crossorigin="anonymous"></script>
     {% block metatitle %}
 
     {% endblock %}
@@ -18,7 +19,12 @@
 </head>
 <body>
     <header>
+        
         <div class="header-complete">
+            <div class="amz-msg">
+                <button class="close-msg-btn">x</button>
+                <p>As an Amazon Associate, I earn from qualifying purchases</p>
+            </div>
             <div class="header-top-bar">
                 <div class="logo">
                     <img class="logo-img" src="{% static 'imgs/logo.png' %}" alt="">
@@ -37,7 +43,7 @@
                     <ul class="menu">
                         <li><a class="menu-item" href="{% url 'homepage' %}">Home</a></li>
                         {% for menu_category in menu_categories %}
-                        <li><a class="menu-item" href="">{{menu_category.name}}</a></li>
+                        <li><a class="menu-item" href="{% url 'category_detail' slug=menu_category.slug %}">{{menu_category.name}}</a></li>
                         {% endfor %}
                     </ul>
                 </nav>
@@ -65,5 +71,6 @@
     {% block scripts %}
 
     {% endblock %}
+     <script src="{% static 'js/global.js' %}"></script>
 </body>
 </html>

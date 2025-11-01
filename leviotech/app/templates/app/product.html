@@ -9,7 +9,7 @@
 
 {% block hero %}
    <div class="beadcrumb">
-        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'product_detail' slug=product.slug %}">{{product.title}}</a> </p>
+        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'category_detail' slug=product.category.slug %}">{{product.category}}</a> > <a href="{% url 'product_detail' slug=product.slug %}">{{product.title}}</a> </p>
    </div>
 
 {% endblock %}
@@ -37,9 +37,55 @@
             </article>
 
             <a class="view-more amz-link" target="_blank" href="{{product.affiliate_url}}">View on Amazon</a>
+       
+            <ul class="share-btns">
+                <h4>Share this Product:</h4>
+                <li>
+                <a class="fb-share" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><i class="fa-brands fa-square-facebook"></i></a>
+                </li>
+                <li>
+                <a class="tweet-share" target="_blank" href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </li>
+                <li>
+                <a class="linkedin-share" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ post.title }}"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+          
+             </ul>
+        </div>
+
+        <div class="sidebar-products">
+            <h4 class="section-title">Featured Products</h4>
+            <div class="sidebar-products-wraper">
+                {% for sidebar_product in sidebar_products %}
+                    <div class="sidebar-product">
+                        {% if sidebar_product.get_featured_image %}
+                        <img class="product-img" src="{{ sidebar_product.get_featured_image.image.url }}" alt="{{ sidebar_product.title }}">
+                        {% endif %}
+                        <p class="product-title">{{ sidebar_product.title }}</p>
+                        <a class="product-view-more" href="{% url 'product_detail' slug=sidebar_product.slug %}"  class="amz-link">View More</a>
+                    </div>
+                {% endfor %}
+            </div>
+         
         </div>
     </div>
  
+</section>
+
+<section class="featured-products">
+     <h4 class="section-title">More Featured Products</h4>
+    <div class="wraper-width featured-products-wraper">
+        {% for featured_product in featured_products %}
+            <div class="product">
+                {% if featured_product.get_featured_image %}
+                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                {% endif %}
+                <p class="product-title">{{ featured_product.title }}</p>
+                <a class="product-view-more" href="{% url 'product_detail' slug=featured_product.slug %}"  class="amz-link">View More</a>
+            </div>
+        {% endfor %}
+    </div>
+
 </section>
 
 {% endblock %}

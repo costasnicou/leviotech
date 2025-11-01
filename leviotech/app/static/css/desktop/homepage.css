@@ -436,5 +436,15 @@ font-weight: 300;
   
 }
 
+.tabbed-view-more{
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.tabbed-view-more:hover{
+  color: #025ec0;
+  
+}
+
 
 /* end tabbed products */

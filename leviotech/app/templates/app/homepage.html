@@ -46,7 +46,7 @@
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/laptops.jpg' %}" alt="">
                         <p><span class="enthousiasm">Next-Level</span> Performance Awaits — <span class="enthousiasm">Buy Now!</span>
-                         <a href="" class="view-more">View More</a>
+                         <a href="{% url 'category_detail' slug="laptops" %}" class="view-more">View More</a>
                         </p>
                     
                     </div>
@@ -58,7 +58,7 @@
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/keyboards.jpg' %}" alt="">
                         <p>Feel the <span class="enthousiasm">Power</span> in Every <span class="enthousiasm">Keystroke</span> — Shop Now!
-                         <a href="" class="view-more">View More</a>
+                         <a href="{% url 'category_detail' slug="keyboards" %}" class="view-more">View More</a>
                         </p>
                     
                     </div>
@@ -69,7 +69,7 @@
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/headset.jpg' %}" alt="">
                         <p>Step Into the <span class="enthousiasm">Sound of Victory</span> — Get Yours <span class="enthousiasm">Today!</span>
-                        <a href="" class="view-more">View More</a>
+                        <a href="{% url 'category_detail' slug="headset" %}" class="view-more">View More</a>
                         </p>
                     
                     </div>
@@ -151,8 +151,8 @@
         <div class="tabs">
             <div class="tab-buttons">
                 <button class="tab-btn active" data-tab="tab1">Laptops</button>
-                <button class="tab-btn" data-tab="tab2">PC'</button>
-                <button class="tab-btn" data-tab="tab3">keyboards</button>
+                <button class="tab-btn" data-tab="tab2">PC's</button>
+                <button class="tab-btn" data-tab="tab3">Keyboards</button>
                 <button class="tab-btn" data-tab="tab4">Mouse</button>
                 <button class="tab-btn" data-tab="tab5">Headset</button>
                 <button class="tab-btn" data-tab="tab6">Gaming Chairs</button>
@@ -161,30 +161,32 @@
             <div class="tab-content">
                 <div id="tab1" class="laptops-tab tab-pane active">
                     <div class="tab-wraper">
-                        {% for featured_product in featured_products %}
+                        {% for category_laptop in category_laptops %}
                             <div class="product">
-                                {% if featured_product.get_featured_image %}
-                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% if category_laptop.get_featured_image %}
+                                <img class="product-img" src="{{ category_laptop.get_featured_image.image.url }}" alt="{{ category_laptop.title }}">
                                 {% endif %}
-                                <p class="product-title">{{ featured_product.title }}</p>
-                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                                <p class="product-title">{{ category_laptop.title }}</p>
+                                <a class="product-view-more" href="{% url 'product_detail' slug=category_laptop.slug %}">View More</a>
                             </div>
                         {% endfor %}
                     </div>
+                    <a href="{% url 'category_detail' slug='laptops' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab2" class="pc-tab tab-pane">
                         <div class="tab-wraper">
-                            {% for featured_product in featured_products %}
+                            {% for category_pc in category_pcs %}
                             <div class="product">
-                                {% if featured_product.get_featured_image %}
-                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% if category_pc.get_featured_image %}
+                                <img class="product-img" src="{{ category_pc.get_featured_image.image.url }}" alt="{{ category_pc.title }}">
                                 {% endif %}
-                                <p class="product-title">{{ featured_product.title }}</p>
-                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                                <p class="product-title">{{ category_pc.title }}</p>
+                                <a class="product-view-more" href="{% url 'product_detail' slug=category_pc.slug %}">View More</a>
                             </div>
-                        {% endfor %}
-                    </div>
+                            {% endfor %}
+                        </div>
+                         <a href="{% url 'category_detail' slug='pc' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab3" class="keyboards-tab tab-pane">

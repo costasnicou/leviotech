@@ -5,6 +5,34 @@ html,body{
      font-family: "Lato", sans-serif;
 }
 
+.amz-msg{
+    background-color: #1c639d;
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.amz-msg p{
+    text-align: center;
+    color:white;
+    margin: 0;
+    font-size: 13px;
+}
+
+.amz-msg .close-msg-btn{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    background-color: rgba(255, 0, 0, 0);
+    color:white;
+    font-size: 20px;
+    border: 1px solid rgba(255, 0, 0, 0);
+
+}
+
 .header-complete{
     position: fixed;
     top: 0;
@@ -133,7 +161,36 @@ main{
     margin: 0 auto;
 }
 
+.beadcrumb{
+  
+    height:400px;
+    margin-top: 141px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../imgs/breadcrumb.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgb(240, 247, 255); */
+
+}
+.beadcrumb p a{
+    margin: 5px;
+}
+.beadcrumb a,.beadcrumb p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.beadcrumb a:visited{
+    color: white;
+
+}
+
 footer{
-    height: 400px;
+    height: 200px;
     background-color: #258ce1;
+      background-color: #206fb0; 
+     /* background-color: rgb(38, 41, 51); */
 }

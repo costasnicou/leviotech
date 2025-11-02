@@ -439,6 +439,8 @@ font-weight: 300;
 .tabbed-view-more{
   color: #007BFF;
   text-decoration: none;
+  margin: 20px 0;
+  display: inline-block;
 }
 
 .tabbed-view-more:hover{

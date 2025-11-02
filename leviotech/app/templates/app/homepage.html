@@ -11,22 +11,22 @@
         <div class="slides">
             <div class="slide slide1 ">
                 <hgroup>
-                    <h1 class="heading">Unlock Your True Potential</h1>
-                    <h2 class="sub-heading">Every great journey begins with a single decision. Start yours today.</h2>
+                    <h1 class="heading">Gear & Accessories Built for Power and Precision</h1>
+                    <h2 class="sub-heading">Unlock peak performance with cutting-edge technology, and immersive gaming tools</h2>
                 </hgroup>
             </div>
 
             <div class="slide slide2" >
                 <hgroup>
-                    <h1 class="heading">Fuel Your Mind. Transform Your Life.</h1>
-                    <h2 class="sub-heading">Empower yourself with knowledge, discipline, and daily growth.</h2>
+                    <h1 class="heading">Your Ultimate Destination for High-Performance Gaming Tech</h1>
+                    <h2 class="sub-heading">Find everything you need to upgrade your gaming world in one place</h2>
                 </hgroup>
                 
             </div>
             <div class="slide slide3" >
                 <hgroup>
-                    <h1 class="heading">Rise Above Limits</h1>
-                    <h2 class="sub-heading">Break free from doubt and step boldly into your greatness.</h2>
+                    <h1 class="heading">Peripherals & Tech Engineered for Victory</h1>
+                    <h2 class="sub-heading">Experience ultra-fast response times, powerful graphics, and precision engineering</h2>
                 </hgroup>            
             </div>
         </div>
@@ -186,21 +186,22 @@
                             </div>
                             {% endfor %}
                         </div>
-                         <a href="{% url 'category_detail' slug='pc' %}" class="tabbed-view-more">More Products</a>
+                        <a href="{% url 'category_detail' slug='pc' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab3" class="keyboards-tab tab-pane">
                         <div class="tab-wraper">
-                        {% for featured_product in featured_products %}
-                            <div class="product">
-                                {% if featured_product.get_featured_image %}
-                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
-                                {% endif %}
-                                <p class="product-title">{{ featured_product.title }}</p>
-                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
-                            </div>
-                        {% endfor %}
-                    </div>
+                            {% for category_keyboard in category_keyboards %}
+                                <div class="product">
+                                    {% if category_keyboard.get_featured_image %}
+                                    <img class="product-img" src="{{ category_keyboard.get_featured_image.image.url }}" alt="{{ category_keyboard.title }}">
+                                    {% endif %}
+                                    <p class="product-title">{{ category_keyboard.title }}</p>
+                                    <a class="product-view-more" href="{% url 'product_detail' slug=category_keyboard.slug  %}">View More</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a href="{% url 'category_detail' slug='keyboards' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab4" class="mouse-tab tab-pane">

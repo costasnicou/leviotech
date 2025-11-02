@@ -7,12 +7,12 @@ def homepage(request):
     menu_categories = ProductCategory.objects.all()
     featured_products = Product.objects.filter(featured=True)
     best_deals = Product.objects.filter(best_deal=True).order_by('id')
-
     first_four_best_deals = best_deals[:4]
     last_four_best_deals = best_deals.order_by('-id')[:4]  # last 4 by id descending
     best_deal_star = Product.objects.filter(best_deal_star=True).first()
-    category_laptops = Product.objects.filter(category__name="Laptops")[:10]
-    category_pcs = Product.objects.filter(category__name="PC'S")[:10]
+    category_laptops = Product.objects.filter(category__name="Laptops")[:5]
+    category_pcs = Product.objects.filter(category__name="PC'S")[:5]
+    category_keyboards = Product.objects.filter(category__name="Keyboards")[:5]
     return render(request,'app/homepage.html',{
         'menu_categories':menu_categories,
         'featured_products':featured_products,
@@ -21,6 +21,8 @@ def homepage(request):
         'best_deal_star':best_deal_star,
         'category_laptops':category_laptops,
         'category_pcs':category_pcs,
+        'category_keyboards':category_keyboards,
+
     })
 
 def product_detail(request, slug):

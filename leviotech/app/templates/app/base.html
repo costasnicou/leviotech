@@ -65,9 +65,35 @@
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
+        <div class="footer-about">
+            <div class="logo">
+                <img class="logo-img" src="{% static 'imgs/footer-logo.png' %}" alt="">
+            </div>
+            <p>Leviotech brings you the best gaming tech — deals, and top Amazon picks.</p>
+        </div>
 
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+            <li><a href="{% url 'category_detail' 'laptops' %}">Gaming Laptops</a></li>
+            <li><a href="{% url 'category_detail' 'keyboards' %}">Keyboards</a></li>
+            <li><a href="{% url 'category_detail' 'headset' %}">Headsets</a></li>
+            <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-legal">
+            <ul>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Affiliate Disclosure</a></li>
+            </ul>
+            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+            <p>&copy; {{ now.year }} Leviotech. All rights reserved.</p>
+        </div>
     </footer>
+
     {% block scripts %}
 
     {% endblock %}

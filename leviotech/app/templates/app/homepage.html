@@ -99,12 +99,13 @@
     </section>
 
     <section class="best-deals">
-        <img class="left-bg-opacity" src="{% static 'imgs/gamer-transparent.png' %}" alt="">
+       
         <h2 class="section-title">Best Deals</h2>
         <div class="best-deals-wrapper wraper-width">
             <div class="best-deals-left">
                 {% for first_four_best_deal in first_four_best_deals %}
                 <div class="product">
+                    <p class="best-deal-promo">Best Deal</p>
                     {% if first_four_best_deal.get_featured_image %}
                         <img class="product-img" src="{{ first_four_best_deal.get_featured_image.image.url }}" alt="{{ first_four_best_deal.title }}">
                     {% endif %}
@@ -119,6 +120,7 @@
 
             <div class="best-deals-center">
                 <div class="product">
+                    <p class="best-deal-promo">Best Deal</p>
                     {% if best_deal_star.get_featured_image %}
                         <img class="product-img" src="{{ best_deal_star.get_featured_image.image.url }}" alt="{{ best_deal_star.title }}">
                     {% endif %}
@@ -131,6 +133,7 @@
             <div class="best-deals-right">
                {% for last_four_best_deal in last_four_best_deals %}
                 <div class="product">
+                     <p class="best-deal-promo">Best Deal</p>
                      {% if last_four_best_deal.get_featured_image %}
                     <img class="product-img" src="{{ last_four_best_deal.get_featured_image.image.url }}" alt="{{ last_four_best_deal.title }}">
                     {% endif %}
@@ -143,7 +146,7 @@
             </div>
             
         </div>
-        <img class="right-bg-opacity" src="{% static 'imgs/gamer-transparent.png' %}" alt="">
+       
     </section>
 
     <section class="tabbed-categories">
@@ -206,44 +209,47 @@
 
                 <div id="tab4" class="mouse-tab tab-pane">
                     <div class="tab-wraper">
-                            {% for featured_product in featured_products %}
-                            <div class="product">
-                                {% if featured_product.get_featured_image %}
-                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
-                                {% endif %}
-                                <p class="product-title">{{ featured_product.title }}</p>
-                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
-                            </div>
-                        {% endfor %}
-                    </div>
+                            {% for category_mouse in category_mouses %}
+                                <div class="product">
+                                    {% if category_mouse.get_featured_image %}
+                                    <img class="product-img" src="{{ category_mouse.get_featured_image.image.url }}" alt="{{ category_mouse.title }}">
+                                    {% endif %}
+                                    <p class="product-title">{{ category_mouse.title }}</p>
+                                    <a class="product-view-more" href="{% url 'product_detail' slug=category_mouse.slug %}">View More</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a href="{% url 'category_detail' slug='mouse' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab5" class="headset-tab tab-pane">
                     <div class="tab-wraper">
-                    {% for featured_product in featured_products %}
-                        <div class="product">
-                            {% if featured_product.get_featured_image %}
-                            <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
-                            {% endif %}
-                            <p class="product-title">{{ featured_product.title }}</p>
-                            <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
-                        </div>
-                    {% endfor %}
-                        </div>
+                        {% for category_headset in category_headsets %}
+                            <div class="product">
+                                {% if category_headset.get_featured_image %}
+                                <img class="product-img" src="{{ category_headset.get_featured_image.image.url }}" alt="{{ category_headset.title }}">
+                                {% endif %}
+                                <p class="product-title">{{ category_headset.title }}</p>
+                                <a class="product-view-more" href="{% url 'product_detail' slug=category_headset.slug %}">View More</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a href="{% url 'category_detail' slug='headset' %}" class="tabbed-view-more">More Products</a>
                 </div>
 
                 <div id="tab6" class="gaming-chairs-tab tab-pane">
                     <div class="tab-wraper">
-                        {% for featured_product in featured_products %}
+                        {% for category_chair in category_chairs %}
                             <div class="product">
-                                {% if featured_product.get_featured_image %}
-                                <img class="product-img" src="{{ featured_product.get_featured_image.image.url }}" alt="{{ featured_product.title }}">
+                                {% if category_chair.get_featured_image %}
+                                <img class="product-img" src="{{ category_chair.get_featured_image.image.url }}" alt="{{ category_chair.title }}">
                                 {% endif %}
-                                <p class="product-title">{{ featured_product.title }}</p>
-                                <a class="product-view-more" href="{{ featured_product.affiliate_url }}" target="_blank" class="amz-link">View More</a>
+                                <p class="product-title">{{ category_chair.title }}</p>
+                                <a class="product-view-more" href="{% url 'product_detail' slug=category_chair.slug %}">View More</a>
                             </div>
                         {% endfor %}
                     </div>
+                      <a href="{% url 'category_detail' slug='gaming-chairs' %}" class="tabbed-view-more">More Products</a>
                 </div>
             </div>
         </div>

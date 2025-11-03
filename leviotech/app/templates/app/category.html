@@ -20,15 +20,40 @@
 <section class="category-products">
     <h2 class="section-title">{{category.name}}</h2>
     <div class="category-products-wraper wraper-width">
-        {% for related_product in related_products %}
+        {% for product in products %}
             <div class="product">
-                {% if related_product.get_featured_image %}
-                <img class="product-img" src="{{ related_product.get_featured_image.image.url }}" alt="{{ related_product.title }}">
+                {% if product.get_featured_image %}
+                <img class="product-img" src="{{ product.get_featured_image.image.url }}" alt="{{ product.title }}">
                 {% endif %}
-                <p class="product-title">{{ related_product.title }}</p>
-                <a class="product-view-more" href="{% url 'product_detail' slug=related_product.slug %}">View More</a>
+                <p class="product-title">{{ product.title }}</p>
+                <a class="product-view-more" href="{% url 'product_detail' slug=product.slug %}">View More</a>
             </div>
         {% endfor %}
+     
+    </div>
+    <div class="pagination">
+        {% if products.has_previous %}
+            <a href="?page=1{% if querystring %}&{{ querystring }}{% endif %}">« First</a>
+            <a href="?page={{ products.previous_page_number }}{% if querystring %}&{{ querystring }}{% endif %}">‹ Prev</a>
+        {% endif %}
+        
+        {% if products.paginator.num_pages > 1 %}
+            {% for num in products.paginator.page_range %}
+          
+                {% if num > products.number|add:'-3' and num < products.number|add:'3' %}
+                    {% if products.number == num %}
+                        <span class="current">{{ num }}</span>
+                    {% else %}
+                        <a href="?page={{ num }}{% if querystring %}&{{ querystring }}{% endif %}">{{ num }}</a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if products.has_next %}
+            <a href="?page={{ products.next_page_number }}{% if querystring %}&{{ querystring }}{% endif %}">Next ›</a>
+            <a href="?page={{ products.paginator.num_pages }}{% if querystring %}&{{ querystring }}{% endif %}">Last »</a>
+        {% endif %}
     </div>
 </section>
 {% endblock %}

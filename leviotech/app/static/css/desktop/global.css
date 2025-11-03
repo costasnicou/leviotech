@@ -51,11 +51,10 @@ html,body{
 .welcome-msg{
     font-size: 17px;
 }
-.logo-img{
+.logo-img {
     height: 60px;
-    width: 220px;
+    width: 210px;
     margin-left: 200px;
-   
 }
 
 .contact-header{
@@ -171,7 +170,7 @@ main{
     background-image: url(../../imgs/breadcrumb.jpg);
     background-size: cover;
     background-position: center;
-    /* background-color: rgb(240, 247, 255); */
+ 
 
 }
 .beadcrumb p a{
@@ -188,9 +187,125 @@ main{
 
 }
 
-footer{
+/* footer{
     height: 200px;
     background-color: #258ce1;
-      background-color: #206fb0; 
+      background-color: #1c5f96; 
      /* background-color: rgb(38, 41, 51); */
+
+
+
+/* ===== FOOTER BASE STYLING ===== */
+.site-footer {
+    background-color: #17598e;  
+    background-color: #326d9d;        /* dark tech feel */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;            /* center the three main divs horizontally */
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;                    /* make responsive for smaller screens */
+    /* border-top: 2px solid #1f1f2e; */
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+/* ===== EACH FOOTER SECTION ===== */
+.site-footer > div {
+  /* flex: 1 1 250px;                    responsive flexible width */
+  max-width: 350px;
+  margin: 0 100px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.footer-about .logo .logo-img {
+    width: 226px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* ===== LINKS SECTION ===== */
+.footer-links h4 {
+  font-size: 1.1rem;
+ color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+ color: white;                  /* accent color */
+}
+
+/* ===== LEGAL SECTION ===== */
+.footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.footer-legal ul li {
+  margin-bottom: 8px;
+}
+
+.footer-legal a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: white;
+}
+
+.footer-legal p {
+  font-size: 0.85rem;
+ color: white;
+  margin: 5px 0;
+}
+
+/* ===== COPYRIGHT / AMAZON DISCLOSURE ===== */
+.footer-legal p:last-child {
+  margin-top: 15px;
+  border-top: 1px solid  white;
+  padding-top: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .site-footer > div {
+    max-width: 100%;
+  }
+
+  .footer-legal ul,
+  .footer-links ul {
+    display: inline-block;
+  }
 }

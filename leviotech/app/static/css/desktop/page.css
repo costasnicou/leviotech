@@ -1,0 +1,25 @@
+.beadcrumb{
+   
+    background-image: url();
+     background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(61, 112, 178, 0.735), 
+      rgba(66, 112, 163, 0.617)
+    ),
+    /* bottom, image */
+    url(../../imgs/breadcrumb-legal.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.page-section{
+    padding: 80px 0;
+}
+.content{
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+}
+.content p, .content li{
+    font-size: 20px;
+}

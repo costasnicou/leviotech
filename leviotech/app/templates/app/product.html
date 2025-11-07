@@ -3,6 +3,26 @@
 {% block metatitle %}
  <title>Leviotech - {{product.title}}</title>
 {% endblock %}
+
+{% block metaseo %}
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="{{ product.title }}" />
+  <meta property="og:description" content="{{ post.description|safe|striptags|truncatewords:25 }}" />
+  <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+  {% if  product.get_featured_image.image %}
+    <meta property="og:image" content="{{ absolute_image_url }}" />
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ post.title }}" />
+  <meta name="twitter:description" content="{{ post.content|striptags|truncatewords:25 }}" />
+  {% if  product.get_featured_image.image %}
+    <meta name="twitter:image" content="{{ absolute_image_url }}" />
+  {% endif %}
+{% endblock %}
+
+
 {% block css %}
   <link rel="stylesheet" href="{% static 'css/desktop/single-product.css' %}">
 {% endblock %}

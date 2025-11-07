@@ -167,7 +167,17 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../imgs/breadcrumb.jpg);
+    /* background-image: url(; */
+        /* background-image: url(../../imgs/breadcrumb-category.jpg); */
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    
+    linear-gradient(
+      rgba(61, 112, 178, 0.735), 
+      rgba(66, 112, 163, 0.617)
+    ),
+    /* bottom, image */
+    url(../../imgs/breadcrumb.jpg);
     background-size: cover;
     background-position: center;
  

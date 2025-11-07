@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block metatitle %}
+ <title>Leviotech - {{page.title}}</title>
+{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/desktop/page.css' %}">
+{% endblock %}
+
+{% block hero %}
+   <div class="beadcrumb">
+        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'page_detail' slug=page.slug %}">{{page.title}}</a></p>
+   </div>
+
+{% endblock %}
+
+{% block main %}
+<section class="page-section">
+     <h1 class="section-title">{{page.title}}</h1>
+    <article class="content">
+       {{ page.content|safe }}
+    </article>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+   
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from . models import ProductCategory, Product
+from . models import ProductCategory, Product, Page
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import datetime
 # Create your views here.
 def homepage(request):
     # test='hello world'
@@ -28,6 +29,7 @@ def homepage(request):
         'category_mouses':category_mouses,
         'category_headsets':category_headsets,
         'category_chairs':category_chairs,
+        'now': datetime.now(),
 
     })
 
@@ -41,12 +43,25 @@ def product_detail(request, slug):
     reverse_products = Product.objects.filter(featured=True).order_by('id')
     sidebar_products= reverse_products.order_by('-id')[:3]
     product_images = product.images.all()
+    
+    
+    
+    absolute_image_url = None
+
+    img_obj = product.get_featured_image()   # <-- call the method
+
+    if img_obj and getattr(img_obj, "image", None):  # adjust "image" to your field name
+        # .url works only if the file exists and MEDIA_* are configured
+        absolute_image_url = request.build_absolute_uri(img_obj.image.url)
+   
     return render(request, 'app/product.html', {
         'menu_categories':menu_categories,
         'product':product,
         'product_images':product_images,
         'featured_products':featured_products,
         'sidebar_products':sidebar_products,
+        'absolute_image_url': absolute_image_url,
+        'now': datetime.now(),
     })
 
 def category_detail(request, slug):
@@ -71,6 +86,17 @@ def category_detail(request, slug):
         'menu_categories':menu_categories,
         'category':category,
         'related_products':related_products,
-        'products':products
+        'products':products,
+        'now': datetime.now(),
     })
 
+
+def page_detail(request,slug):
+    menu_categories = ProductCategory.objects.all()
+    page = get_object_or_404(Page, slug=slug)
+
+    return render(request,'app/page.html',{
+        'page':page,
+        'menu_categories':menu_categories,
+        'now': datetime.now(),
+    })

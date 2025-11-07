@@ -89,3 +89,18 @@ class ProductImage(models.Model):
     class Meta:
         verbose_name = "Product Image"
         verbose_name_plural = "Product Images"
+
+
+
+class Page(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(unique=True, blank=True)
+    content = CKEditor5Field('Content', config_name='extends')
+
+    def __str__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)

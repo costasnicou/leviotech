@@ -8,9 +8,10 @@
     /* background-image: url(../../imgs/breadcrumb-category.jpg); */
     background: 
     /* top, transparent red, faked with gradient */ 
+    
     linear-gradient(
-      rgba(44, 44, 44, 0.61), 
-      rgba(43, 43, 43, 0.617)
+      rgba(61, 112, 178, 0.735), 
+      rgba(66, 112, 163, 0.617)
     ),
     /* bottom, image */
     url(../../imgs/breadcrumb-category.jpg);

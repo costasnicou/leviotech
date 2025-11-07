@@ -13,6 +13,10 @@
 
     {% endblock %}
 
+    {% block metaseo %}
+
+    {% endblock %}
+
     {% block css %}
 
     {% endblock %}
@@ -79,15 +83,16 @@
             <li><a href="{% url 'category_detail' 'laptops' %}">Gaming Laptops</a></li>
             <li><a href="{% url 'category_detail' 'keyboards' %}">Keyboards</a></li>
             <li><a href="{% url 'category_detail' 'headset' %}">Headsets</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="{% url 'category_detail' 'mouse' %}">Mouse</a></li>
+
             </ul>
         </div>
 
         <div class="footer-legal">
             <ul>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms of Service</a></li>
-            <li><a href="">Affiliate Disclosure</a></li>
+            <li><a href="{% url 'page_detail' slug='privacy-policy' %}">Privacy Policy</a></li>
+            <li><a href="{% url 'page_detail' slug='terms-of-service' %}">Terms of Service</a></li>
+            <li><a href="{% url 'page_detail' slug='affiliate-disclosure' %}">Affiliate Disclosure</a></li>
             </ul>
             <p>As an Amazon Associate, I earn from qualifying purchases.</p>
             <p>&copy; {{ now.year }} Leviotech. All rights reserved.</p>

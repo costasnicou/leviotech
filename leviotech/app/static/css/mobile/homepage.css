@@ -1,0 +1,120 @@
+/* Base: phones (default styles, no media query) */
+
+/* ≥ 480px: large phones / small landscape */
+@media (min-width: 320px) and (max-width:525px) {
+
+    /* html,body{
+        overflow-x: hidden;
+    } */
+  
+    /* slider */
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        margin-top: 203px;
+        border-radius: unset;
+        border-bottom: unset;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .sub-heading {
+        font-size: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    button.prev, button.next {
+       display: none;
+    }
+
+
+    /* featured categories */
+
+    .featured-category-wraper{
+        height: unset;
+    }
+   
+
+
+    .featured-categories-wraper {
+        display: flex;
+        justify-content: flex-start; /* Keep items aligned at start */
+        width: 100%;
+        overflow-x: auto; /* enables scrolling */
+        scroll-behavior: smooth;
+        gap: 12px; /* optional spacing */
+        padding: 10px;
+    }
+
+
+    .featured-category {
+        flex: 0 0 auto; /* prevents items from shrinking */
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+     .featured-category p {
+        width: 60%;
+        margin: 0 auto;
+        position: unset;
+    }
+
+    .category-view-more,.category-keyboards-view-more {
+        position: absolute;
+        position: unset;
+        position: relative;
+        left: 0;
+        top: 0;
+        bottom: 10px;
+    }
+
+
+    /* featured products */
+    .featured-products > img {
+        display: none;
+    }
+
+    /* tabbed  */
+    .tab-buttons {
+        display: flex;
+        border-bottom: 2px solid #ccc;
+        width: 100%;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .tab-btn {
+        flex: 0 0 auto;
+        padding: 10px;
+        background-color: #3292e1;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        transition: background 0.3s;
+        margin: 5px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    
+}
+
+/* ≥ 768px: tablets */
+/* @media (min-width: 768px) {} */
+
+/* ≥ 1024px: small laptops */
+/* @media (min-width: 1024px) {} */
+
+/* ≥ 1280px: desktops */
+/* @media (min-width: 1280px) {} */
+
+/* (optional) ≥ 1536px: large/4K desktops */
+/* @media (min-width: 1536px) {} */

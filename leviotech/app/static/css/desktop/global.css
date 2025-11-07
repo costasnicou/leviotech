@@ -5,6 +5,9 @@ html,body{
      font-family: "Lato", sans-serif;
 }
 
+.hamburger,#toggle{
+  display: none;
+}
 .amz-msg{
     background-color: #1c639d;
     position: relative;

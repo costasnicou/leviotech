@@ -4,7 +4,8 @@
  <title>Leviotech - Homepage</title>
 {% endblock %}
 {% block css %}
- <link rel="stylesheet" href="{% static 'css/desktop/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/desktop/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile/homepage.css' %}">
 {% endblock %}
 {% block hero %}
     <div class="slider">
@@ -46,22 +47,25 @@
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/laptops.jpg' %}" alt="">
                         <p><span class="enthousiasm">Next-Level</span> Performance Awaits — <span class="enthousiasm">Buy Now!</span>
-                         <a href="{% url 'category_detail' slug="laptops" %}" class="view-more">View More</a>
+                        
                         </p>
                     
                     </div>
+                     <a href="{% url 'category_detail' slug="laptops" %}" class="view-more category-view-more">View More</a>
                 </div>
                
+
 
                 <div class="featured-category-wraper">
                     <h4>Gaming Keyboards</h4>
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/keyboards.jpg' %}" alt="">
                         <p>Feel the <span class="enthousiasm">Power</span> in Every <span class="enthousiasm">Keystroke</span> — Shop Now!
-                         <a href="{% url 'category_detail' slug="keyboards" %}" class="view-more">View More</a>
+                        
                         </p>
                     
                     </div>
+                     <a href="{% url 'category_detail' slug="keyboards" %}" class="view-more category-keyboards-view-more ">View More</a>
                 </div>
 
                 <div class="featured-category-wraper">
@@ -69,10 +73,11 @@
                     <div class="featured-category">
                         <img src="{% static 'imgs/featured-categories/headset.jpg' %}" alt="">
                         <p>Step Into the <span class="enthousiasm">Sound of Victory</span> — Get Yours <span class="enthousiasm">Today!</span>
-                        <a href="{% url 'category_detail' slug="headset" %}" class="view-more">View More</a>
+                        
                         </p>
                     
                     </div>
+                    <a href="{% url 'category_detail' slug="headset" %}" class="view-more category-view-more">View More</a>
                 </div>
 
             </div>

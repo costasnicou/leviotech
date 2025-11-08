@@ -1,0 +1,66 @@
+/* ≥ 1280px: desktops */
+@media (min-width: 1280px) and (max-width:1536px) {
+
+    /* slider */
+    .heading {
+        font-size: 50px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .sub-heading {
+        font-size: 35px;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .product {
+        width: 180px;
+        margin: 10px 20px;
+        text-align: center;
+        border: 1px solid rgb(240, 240, 240);
+        padding: 30px 10px;
+        border-radius: 10px;
+        box-shadow: 10px 7px 35px 13px rgba(237, 237, 237, 0.15);
+        -webkit-box-shadow: 10px 7px 35px 13px rgba(237, 237, 237, 0.15);
+        -moz-box-shadow: 10px 7px 35px 13px rgba(237,237,237,0.15);
+        transition: all 0.4s ease-in;
+    }
+
+    .product-img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    .best-deals-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* best deals */
+    .best-deals-left {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        /* background-color: #82b5da; */
+    }
+
+    .best-deals-center {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .best-deals-right {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}

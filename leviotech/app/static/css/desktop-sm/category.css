@@ -1,0 +1,20 @@
+@media (min-width: 1024px) and (max-width:1279px) {
+    .category-products-wraper .product {
+        width: 180px;
+        margin: 10px 20px;
+        text-align: center;
+        border: 1px solid rgb(240, 240, 240);
+        padding: 30px 10px;
+        border-radius: 10px;
+        box-shadow: 10px 7px 35px 13px rgba(237, 237, 237, 0.15);
+        -webkit-box-shadow: 10px 7px 35px 13px rgba(237, 237, 237, 0.15);
+        -moz-box-shadow: 10px 7px 35px 13px rgba(237,237,237,0.15);
+        transition: all 0.4s ease-in;
+    }
+
+    .category-products-wraper .product .product-img {
+    width: 180px;
+    height: 150px;
+    object-fit: contain;
+}
+}

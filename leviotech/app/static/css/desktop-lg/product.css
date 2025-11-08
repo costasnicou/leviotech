@@ -1,0 +1,60 @@
+/* ≥ 1280px: desktops */
+@media (min-width: 1280px) and (max-width:1536px) {
+    .sidebar-products {
+        display: none;
+    }
+
+    .section-title.product-title {
+        /* margin-bottom: 0; */
+        margin-bottom: 40px;
+    }
+
+    .wraper-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .all-product-images img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin: 5px;
+        object-fit: contain;
+        transition: all 0.2s ease-in;
+    }
+
+    .featured-image {
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+    }
+
+    .product-description {
+        width: 60%;
+        text-align: left;
+        /* height: 500px; */
+        position: relative;
+        right: 30px;
+        /* height: 500px; */
+    }
+
+    .beadcrumb a, .beadcrumb p {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+      .share-btns {
+        display: flex;
+        list-style: none;
+        justify-content: flex-start;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        top: 0;
+        /* position: unset; */
+        margin: 20px 0 0 0;
+        /* left: 30px; */
+    }
+}

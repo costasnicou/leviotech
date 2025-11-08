@@ -1,0 +1,16 @@
+/* ≥ 1280px: desktops */
+@media (min-width: 1280px) and (max-width:1536px) {
+    .page-section {
+        padding: 40px 0;
+    }
+
+    .content {
+        text-align: left;
+        margin: 0 auto;
+        width: 75%;
+    }
+
+    .content p, .content li {
+        font-size: 19px;
+    }
+}

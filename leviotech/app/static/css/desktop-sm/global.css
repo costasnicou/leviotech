@@ -1,0 +1,50 @@
+/* ≥ 1024px: small laptops */
+@media (min-width: 1024px) and (max-width:1279px) {
+    .logo-img {
+        height: 60px;
+        width: 210px;
+        margin-left: 40px;
+    }
+
+    .contact-header {
+        display: flex;
+        padding: 20px 40px 20px 0;
+        flex-direction: column;
+    }
+
+    /* menu */
+   .menu li {
+        margin: 2.5px 0;
+        border-right: 1px solid white;
+        padding: 0 8px;
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .menu li a:hover {
+        color: white;
+        background-color: rgb(34, 133, 220);
+        padding: 20px 20px;
+        border-radius: 20px;
+        border-bottom: 1px solid white;
+    }
+
+
+    .site-footer > div {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .wraper-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+}

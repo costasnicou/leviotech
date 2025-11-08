@@ -31,6 +31,9 @@
         justify-content: center;
         position: unset;
         flex-direction: column-reverse;
+        position: relative;
+        top: 0;
+        right: 15px;
     }
 
     .product-images > * {

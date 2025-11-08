@@ -143,5 +143,9 @@
 
 
  
+    .site-footer > div {
+        max-width: 350px;
+        margin: 0 auto;
+    }
 
 }

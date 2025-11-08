@@ -75,10 +75,10 @@
     /* When toggle is checked → make header-menu 40vh */
   
     .menu{
-        /* visibility: hidden; */
+        visibility: hidden;
         opacity: 0;
         /* transition: height 0.5s ease-out; */
-        transition: opacity 0.3s ease-in;
+        transition: all 0.3s ease-in;
         /* transition: opacity 0.01s ease-out; */
         display: flex;
         flex-direction: column;
@@ -101,6 +101,8 @@
 
     .menu-wraper{
         position:relative;
+        height: 42px;
+        /* visibility: hidden; */
     }
 
     /* When the toggle is checked → expand header */
@@ -108,9 +110,12 @@
         height: 41vh;
     }
 
+     #toggle:checked ~ .menu-wraper{
+        height: 40vh;
+     }
 
     #toggle:checked ~ .menu-wraper .menu {
-        /* visibility: visible; */
+        visibility: visible;
         display: block;
         /* margin-top: 42px; */
         /*  */

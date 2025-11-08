@@ -104,6 +104,50 @@
         border-radius: 10px;
     }
 
+    /* best deals */
+    .best-deals-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .best-deals-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        /* background-color: #82b5da; */
+    }
+
+    .best-deals-left .product {
+        width: 90%;
+        /* height: 200px; */
+    }
+
+
+    .best-deals-center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .best-deals-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .best-deals-right .product {
+        width: 90%;
+        /* height: 200px; */
+    }
+
     
 }
 

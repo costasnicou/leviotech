@@ -44,10 +44,10 @@
         align-items: center;
         flex-direction: row;
     }
-
+    
     .featured-image {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
         object-fit: contain;
     }
 

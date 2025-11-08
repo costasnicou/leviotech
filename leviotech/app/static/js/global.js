@@ -14,10 +14,10 @@ closeMsgBtn.addEventListener('click',function(){
 function applyMargin(e) {
   if (e.matches) {
     // Media query is active
-    slider.style.marginTop = "173px";
+    slider.style.marginTop = "142px";
   } else {
     // Reset if outside media query (optional)
-    slider.style.marginTop = "141px";
+    slider.style.marginTop = "140px";
   }
 }
 

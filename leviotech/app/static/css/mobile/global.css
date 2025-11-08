@@ -3,7 +3,6 @@
     .header-top-bar {
         /* background-color: rgb(237, 188, 104); */
         height: 100px;
-        border-bottom: 1px solid black;
         background-color: rgb(254, 254, 254);
         display: flex;
         align-items: center;
@@ -28,14 +27,7 @@
 
 
 
-   .menu-wraper {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        height: unset;
-    }
-
+  
     .menu li {
         margin: 0;
         border-right: unset;
@@ -62,39 +54,88 @@
         color: white;
         font-size: larger;
         position: absolute;
-        font-size: 40px;
+        font-size: 30px;
         left: 30px;
-        top: 9.5px;
+        top: 2.4px;
         z-index: 10;
     }
 
 
-    .header-menu{
+    /* .header-menu{
+       
+    } */
+
+    /* Default */
+    /* .header-menu {
         height: unset;
+        overflow: hidden;
+        transition: height 0.3s ease-in;
     }
 
+    /* When toggle is checked → make header-menu 40vh */
+  
     .menu{
-        visibility: hidden;
-        
+        /* visibility: hidden; */
+        opacity: 0;
+        /* transition: height 0.5s ease-out; */
+        transition: opacity 0.3s ease-in;
+        /* transition: opacity 0.01s ease-out; */
+        display: flex;
+        flex-direction: column;
+        /* display: block; */
+        height: 40vh;
+        position: relative;
+        right: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .header-menu {
+        height: 42px;
+        /* overflow: hidden; */
+        transition: height 0.3s ease-in;
     }
 
 
-    #toggle:checked + .menu {
-        visibility: visible;
+    .menu-wraper{
+        position:relative;
+    }
+
+    /* When the toggle is checked → expand header */
+    .header-menu:has(#toggle:checked) {
+        height: 41vh;
+    }
+
+
+    #toggle:checked ~ .menu-wraper .menu {
+        /* visibility: visible; */
         display: block;
         /* margin-top: 42px; */
-        transition: all 1s ease-out;
+        /*  */
         opacity: 1;
         /* height: 208px; */
-        transition: height 0.5s ease-out;
+        height: 40vh;
+        
         /* background: linear-gradient(145deg, #4c6b80,#8ea7b8); */
         position: relative;
         right: 25px;
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 40vh;
+       
     }
+
+
+
+    .site-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
 
  
 

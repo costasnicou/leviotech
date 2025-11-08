@@ -44,9 +44,10 @@
             </div>
 
             <div class="header-menu">
+                <input type="checkbox" name="checkbox" id="toggle">
                 <nav class="menu-wraper">
                     <label class="hamburger" for="toggle">&#9776;</label>
-                    <input type="checkbox" name="checkbox" id="toggle">
+                   
                     <ul class="menu">
                         <li><a class="menu-item" href="{% url 'homepage' %}">Home</a></li>
                         {% for menu_category in menu_categories %}

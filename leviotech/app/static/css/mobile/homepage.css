@@ -20,12 +20,14 @@
 
     .heading {
         font-size: 40px;
+        padding: 10px;
     }
 
     .sub-heading {
         font-size: 30px;
         width: 80%;
         margin: 0 auto;
+        padding: 10px;
     }
 
     button.prev, button.next {
@@ -80,6 +82,28 @@
     /* featured products */
     .featured-products > img {
         display: none;
+    }
+
+    /* cta */
+    .call-to-action {
+        height: 80px;
+        /* background-color: #326e9f; */
+        /* background-image: url(../../imgs/cta5.jpg); */
+        /* background-image: url(../../imgs/breadcrumb-category.jpg); */
+        background: /* top, transparent red, faked with gradient */ linear-gradient(rgba(61, 112, 178, 0.735), rgba(66, 112, 163, 0.617)), /* bottom, image */ url(../../imgs/cta5.jpg);
+        background-position: center;
+        background-size: cover;
+        color: white;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.9;
     }
 
     /* tabbed  */

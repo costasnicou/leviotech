@@ -85,6 +85,10 @@
         width: 100%;
     }
 
+    .share-btns h4{
+        font-size: 14px;
+        font-weight: 300;
+    }
     .view-more {
         text-decoration: none;
         font-size: 18px;

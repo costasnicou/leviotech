@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from . models import ProductCategory, Product, Page
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import datetime
+from django.templatetags.static import static
 # Create your views here.
 def homepage(request):
     # test='hello world'
@@ -17,6 +18,7 @@ def homepage(request):
     category_mouses = Product.objects.filter(category__name="Mouse")[:10]
     category_headsets = Product.objects.filter(category__name="Headset")[:10]
     category_chairs = Product.objects.filter(category__name="Gaming Chairs")[:10]
+    og_image = request.build_absolute_uri(static('imgs/slider1.jpg'))
     return render(request,'app/homepage.html',{
         'menu_categories':menu_categories,
         'featured_products':featured_products,
@@ -29,6 +31,7 @@ def homepage(request):
         'category_mouses':category_mouses,
         'category_headsets':category_headsets,
         'category_chairs':category_chairs,
+        'og_image': og_image,
         'now': datetime.now(),
 
     })
@@ -66,6 +69,7 @@ def product_detail(request, slug):
 
 def category_detail(request, slug):
     category = get_object_or_404(ProductCategory, slug=slug)
+    og_image = request.build_absolute_uri(static('imgs/breadcrumb-category.jpg'))
     menu_categories = ProductCategory.objects.all()
     related_products = category.products.all()
     # post_list = Post.objects.filter(published=True).order_by('-created_at')
@@ -87,6 +91,7 @@ def category_detail(request, slug):
         'category':category,
         'related_products':related_products,
         'products':products,
+        'og_image': og_image,
         'now': datetime.now(),
     })
 
@@ -94,9 +99,10 @@ def category_detail(request, slug):
 def page_detail(request,slug):
     menu_categories = ProductCategory.objects.all()
     page = get_object_or_404(Page, slug=slug)
-
+    og_image = request.build_absolute_uri(static('imgs/breadcrumb-legal.jpg'))
     return render(request,'app/page.html',{
         'page':page,
+        'og_image':og_image,
         'menu_categories':menu_categories,
         'now': datetime.now(),
     })

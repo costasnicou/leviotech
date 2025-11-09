@@ -3,6 +3,33 @@
 {% block metatitle %}
  <title>Leviotech - {{category.name}}</title>
 {% endblock %}
+
+
+{% block metaseo %}
+ 
+    <meta name="description" content="Discover top-rated {{ category.name|lower }} — explore Leviotech’s best Amazon deals on {{ category.name|lower }}, gaming gear, and accessories.">
+    <meta name="keywords" content="{{ category.name }}, gaming tech, amazon deals, gaming accessories, Leviotech">
+    <meta name="author" content="Leviotech">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.leviotech.com/{{ category.slug }}/">
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="{{ category.name }} | Leviotech">
+    <meta property="og:description" content="Shop the best {{ category.name|lower }} at Leviotech — handpicked Amazon deals for gamers and tech enthusiasts.">
+    <meta property="og:url" content="https://www.leviotech.com/{{ category.slug }}/">
+    <meta property="og:type" content="product.group">
+    <meta property="og:image" content="{{ og_image }}">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ category.name }} | Leviotech">
+    <meta name="twitter:description" content="Find the best deals on {{ category.name|lower }} — only at Leviotech, your source for Amazon gaming tech.">
+    <meta name="twitter:image" content="{{ og_image }}">
+
+{% endblock %}
+
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/desktop/category.css' %}">
     <link rel="stylesheet" href="{% static 'css/desktop-lg/category.css' %}">

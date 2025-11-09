@@ -3,6 +3,36 @@
 {% block metatitle %}
  <title>Leviotech - Homepage</title>
 {% endblock %}
+
+{% block metaseo %}
+ <!-- Basic SEO -->
+    <meta name="description" content="Leviotech brings you the best gaming technology — top-rated laptops, keyboards, headsets, and gear, all carefully selected from Amazon.">
+    <meta name="keywords" content="gaming tech, gaming laptops, gaming keyboards, gaming headsets, amazon deals, gaming accessories, Leviotech">
+    <meta name="author" content="Leviotech">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.leviotech.com/">
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Leviotech | Technology for Gamers">
+    <meta property="og:description" content="Explore Leviotech for the latest gaming tech — discover top deals on gaming laptops, headsets, and accessories from Amazon.">
+    <meta property="og:url" content="https://www.leviotech.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ og_image }}">
+
+
+     <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leviotech | Technology for Gamers">
+    <meta name="twitter:description" content="Find the best gaming gear and Amazon tech deals at Leviotech.">
+    <meta name="twitter:image" content="{{ og_image }}">
+
+
+
+
+{% endblock %}
+
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/desktop/homepage.css' %}">
     <link rel="stylesheet" href="{% static 'css/mobile/homepage.css' %}">

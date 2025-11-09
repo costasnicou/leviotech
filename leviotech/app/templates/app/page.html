@@ -1,7 +1,35 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block metatitle %}
- <title>Leviotech - {{page.title}}</title>
+ <title>Leviotech |Legal Information | {{page.title}}</title>
+{% endblock %}
+{% block metaseo %}
+ 
+    {% block metaseo %}
+   <!-- Basic SEO -->
+   <meta name="description" content="Learn about Leviotech’s legal policies including our Privacy Policy, Terms of Service, Affiliate Disclosure, and data protection practices. Stay informed about how we operate as an Amazon affiliate website.">
+   <meta name="keywords" content="Leviotech legal information, privacy policy, terms of service, affiliate disclosure, amazon affiliate, data protection, user rights, cookies policy">
+   <meta name="author" content="Leviotech">
+
+   <!-- Canonical URL -->
+   <link rel="canonical" href="https://www.leviotech.com/{{page.slug}}">
+
+   <!-- Open Graph -->
+   <meta property="og:title" content="Legal Information | Leviotech">
+   <meta property="og:description" content="Read Leviotech’s official legal documents — Privacy Policy, Terms of Service, and Affiliate Disclosure — to understand how we handle data and affiliate partnerships.">
+   <meta property="og:url" content="https://www.leviotech.com/{{page.slug}}">
+   <meta property="og:type" content="article">
+   <meta property="og:image" content="{{og_image}}">
+
+   <!-- Twitter Cards -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Legal Information | Leviotech">
+   <meta name="twitter:description" content="Stay informed about Leviotech’s Privacy Policy, Terms of Service, and Affiliate Disclosure. Learn how we manage data and comply with affiliate guidelines.">
+   <meta name="twitter:image" content="{{og_image}}">
+
+{% endblock metaseo %}
+
+
 {% endblock %}
 {% block css %}
    <link rel="stylesheet" href="{% static 'css/desktop/page.css' %}">

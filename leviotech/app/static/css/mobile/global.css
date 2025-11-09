@@ -58,7 +58,7 @@
         font-size: 17px;
         padding: 0;
     }
-    
+
     .hamburger {
         display: inline-block;
         color: white;
@@ -115,6 +115,8 @@
         /* visibility: hidden; */
     }
 
+
+
     /* When the toggle is checked → expand header */
     .header-menu:has(#toggle:checked) {
         height: 41vh;
@@ -142,6 +144,17 @@
        
     }
 
+
+    .beadcrumb {
+        height: 200px;
+    }
+
+    .beadcrumb a, .beadcrumb p {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        font-size: 18px;
+    }
 
 
     .site-footer {

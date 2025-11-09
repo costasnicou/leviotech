@@ -177,6 +177,10 @@ font-size: 13px;
     top: 40px;
 }
 
+.share-btns h4{
+    font-weight: 300;
+}
+
 .share-btns li a{
     text-decoration: none;
     margin: 5px

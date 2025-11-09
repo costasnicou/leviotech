@@ -58,7 +58,6 @@
         font-size: 17px;
         padding: 0;
     }
-
     
     .hamburger {
         display: inline-block;
@@ -67,7 +66,7 @@
         position: absolute;
         font-size: 30px;
         left: 30px;
-        top: 2.4px;
+        top: 1.2px;
         z-index: 10;
     }
 

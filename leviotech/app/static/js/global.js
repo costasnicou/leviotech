@@ -2,6 +2,7 @@ const amzMsg = document.querySelector('.amz-msg');
 const closeMsgBtn = document.querySelector('.close-msg-btn');
 const slider = document.querySelector('.slider');
 const mq = window.matchMedia("(min-width: 320px) and (max-width: 525px)");
+
 closeMsgBtn.addEventListener('click',function(){
     amzMsg.style.display = 'none';
     applyMargin(mq);
@@ -18,6 +19,7 @@ function applyMargin(e) {
   } else {
     // Reset if outside media query (optional)
     slider.style.marginTop = "140px";
+    
   }
 }
 

@@ -1,33 +1,49 @@
 const amzMsg = document.querySelector('.amz-msg');
 const closeMsgBtn = document.querySelector('.close-msg-btn');
 const slider = document.querySelector('.slider');
-const mq = window.matchMedia("(min-width: 320px) and (max-width: 525px)");
+const mqmobile = window.matchMedia("(min-width: 320px) and (max-width: 525px)");
+const mqdesktop = window.matchMedia("(min-width: 1024px)");
 const headerTopBar = document.querySelector('.header-top-bar');
 const trigger = document.querySelector(".nav-trigger");
 const logoImg = document.querySelector('.logo-img');
 
 closeMsgBtn.addEventListener('click',function(){
     amzMsg.style.display = 'none';
-    applyMargin(mq);
-    // slider.style.marginTop = "173px";
+    applyMarginmobile(mqmobile);
+    // apply margin desktop
+    applyMargindesktop(mqdesktop);
 
 
 });
 
 
-function applyMargin(e) {
+function applyMarginmobile(e) {
   if (e.matches) {
     // Media query is active
     slider.style.marginTop = "142px";
   } else {
-    // Reset if outside media query (optional)
-    slider.style.marginTop = "140px";
+    if(closeMsgBtn.style.display == "none"){
+      // Reset if outside media query (optional)
+        slider.style.marginTop = "170px";
+    }
+    else{
+        slider.style.marginTop = "140px";
+    }
+  
     
   }
 }
 
+function applyMargindesktop(e) {
+  if (e.matches) {
+    // Media query is active
+    slider.style.marginTop = "140px";
+  } 
+  
+}
+
 // Run on window resize
-mq.addEventListener("change", applyMargin);
+mqmobile.addEventListener("change", applyMarginmobile);
 
 
 // observer

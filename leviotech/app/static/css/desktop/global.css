@@ -182,7 +182,7 @@ main{
     background-size: cover;
     background-position: center;
 }
-.beadcrumb p a{
+.beadcrumb h1 a{
     margin: 5px;
 }
 .beadcrumb a,.beadcrumb h1{

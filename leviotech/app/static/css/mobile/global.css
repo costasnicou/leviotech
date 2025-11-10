@@ -151,7 +151,7 @@
         height: 200px;
     }
 
-    .beadcrumb a, .beadcrumb p {
+    .beadcrumb a, .beadcrumb h1 {
         color: white;
         font-size: 25px;
         font-weight: bold;

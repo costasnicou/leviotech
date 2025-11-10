@@ -20,14 +20,21 @@ closeMsgBtn.addEventListener('click',function(){
 function applyMarginmobile(e) {
   if (e.matches) {
     // Media query is active
-    slider.style.marginTop = "142px";
-  } else {
-    if(closeMsgBtn.style.display == "none"){
+    if(amzMsg.style.display == "none"){
       // Reset if outside media query (optional)
-        slider.style.marginTop = "170px";
+         slider.style.marginTop = "142px";
     }
     else{
+        slider.style.marginTop = "172px";
+    }
+   
+  } else {
+    if(amzMsg.style.display == "none"){
+      // Reset if outside media query (optional)
         slider.style.marginTop = "140px";
+    }
+    else{
+        slider.style.marginTop = "170px";
     }
   
     

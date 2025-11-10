@@ -17,7 +17,7 @@
    <!-- Open Graph -->
    <meta property="og:title" content="Legal Information | Leviotech">
    <meta property="og:description" content="Read Leviotech’s official legal documents — Privacy Policy, Terms of Service, and Affiliate Disclosure — to understand how we handle data and affiliate partnerships.">
-   <meta property="og:url" content="https://www.leviotech.com/{{page.slug}}">
+   <meta property="og:url" content="https://www.leviotech.com/page/{{page.slug}}">
    <meta property="og:type" content="article">
    <meta property="og:image" content="{{og_image}}">
 
@@ -41,7 +41,7 @@
 
 {% block hero %}
    <div class="beadcrumb">
-        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'page_detail' slug=page.slug %}">{{page.title}}</a></p>
+        <h1><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'page_detail' slug=page.slug %}">{{page.title}}</a></h1>
    </div>
 
 {% endblock %}

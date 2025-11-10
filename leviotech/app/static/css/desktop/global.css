@@ -62,14 +62,23 @@ html,body{
 
 .contact-header{
     display: flex;
-    padding: 20px 150px 20px 20px;
+    padding: 20px 200px 20px 0;
     flex-direction: column;
 
 }
 
+
+
 .contact-header > *{
     margin: 2px;
     font-size: 15px;
+
+}
+
+.fa-solid.fa-envelope,.fa-solid.fa-phone{
+  color: #258ce1;
+  font-size: 15px;
+  margin-right: 2.5px;
 
 }
 
@@ -176,7 +185,7 @@ main{
 .beadcrumb p a{
     margin: 5px;
 }
-.beadcrumb a,.beadcrumb p{
+.beadcrumb a,.beadcrumb h1{
     color: white;
     font-size: 25px;
     font-weight: bold;

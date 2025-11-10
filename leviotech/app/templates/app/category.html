@@ -17,7 +17,7 @@
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="{{ category.name }} | Leviotech">
     <meta property="og:description" content="Shop the best {{ category.name|lower }} at Leviotech — handpicked Amazon deals for gamers and tech enthusiasts.">
-    <meta property="og:url" content="https://www.leviotech.com/{{ category.slug }}/">
+    <meta property="og:url" content="https://www.leviotech.com/category/{{ category.slug }}/">
     <meta property="og:type" content="product.group">
     <meta property="og:image" content="{{ og_image }}">
 
@@ -39,7 +39,7 @@
 
 {% block hero %}
    <div class="beadcrumb">
-        <p><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'category_detail' slug=category.slug %}">{{category.name}}</a> </p>
+        <h1><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'category_detail' slug=category.slug %}">{{category.name}}</a> </h1>
    </div>
 
 

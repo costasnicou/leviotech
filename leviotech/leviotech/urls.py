@@ -20,10 +20,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from app import urls
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
     path('', include('app.urls')),  # replace 'app' with your actual app name
+    path(
+        "sitemap.xml",
+        TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml"),
+        name="sitemap"
+    ),
 ]
 
 

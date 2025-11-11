@@ -9,6 +9,8 @@
   <meta property="og:title" content="{{ product.title }}" />
   <meta property="og:description" content="{{ post.description|safe|striptags|truncatewords:25 }}" />
   <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+  <!-- Canonical URL -->
+   <link rel="canonical" href="https://leviotech.com/product/{{product.slug}}">
   {% if  product.get_featured_image.image %}
     <meta property="og:image" content="{{ absolute_image_url }}" />
   {% endif %}

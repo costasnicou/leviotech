@@ -81,33 +81,45 @@
 
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-about">
-            <div class="logo">
-                <img class="logo-img" src="{% static 'imgs/logo-footer-tagline.png' %}" alt="">
+    <footer class="">
+        <div class="site-footer">
+            <div class="footer-about">
+                <div class="logo">
+                    <img class="logo-img" src="{% static 'imgs/logo-footer-tagline.png' %}" alt="">
+                </div>
+                <p>Leviotech brings you the best gaming tech — deals, and top Amazon picks.</p>
+            
             </div>
-            <p>Leviotech brings you the best gaming tech — deals, and top Amazon picks.</p>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                <li><a href="{% url 'category_detail' 'laptops' %}">Gaming Laptops</a></li>
+                <li><a href="{% url 'category_detail' 'keyboards' %}">Keyboards</a></li>
+                <li><a href="{% url 'category_detail' 'headset' %}">Headsets</a></li>
+                <li><a href="{% url 'category_detail' 'mouse' %}">Mouse</a></li>
+
+                </ul>
+               
+            </div>
+
+            <div class="footer-legal">
+                <ul>
+                <li><a href="{% url 'page_detail' slug='privacy-policy' %}">Privacy Policy</a></li>
+                <li><a href="{% url 'page_detail' slug='terms-of-service' %}">Terms of Service</a></li>
+                <li><a href="{% url 'page_detail' slug='affiliate-disclosure' %}">Affiliate Disclosure</a></li>
+                </ul>
+                <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+                <p>&copy; {{ now.year }} Leviotech. All rights reserved.</p>
+            </div>
         </div>
-
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-            <li><a href="{% url 'category_detail' 'laptops' %}">Gaming Laptops</a></li>
-            <li><a href="{% url 'category_detail' 'keyboards' %}">Keyboards</a></li>
-            <li><a href="{% url 'category_detail' 'headset' %}">Headsets</a></li>
-            <li><a href="{% url 'category_detail' 'mouse' %}">Mouse</a></li>
-
-            </ul>
-        </div>
-
-        <div class="footer-legal">
-            <ul>
-            <li><a href="{% url 'page_detail' slug='privacy-policy' %}">Privacy Policy</a></li>
-            <li><a href="{% url 'page_detail' slug='terms-of-service' %}">Terms of Service</a></li>
-            <li><a href="{% url 'page_detail' slug='affiliate-disclosure' %}">Affiliate Disclosure</a></li>
-            </ul>
-            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
-            <p>&copy; {{ now.year }} Leviotech. All rights reserved.</p>
+         <div class="social-pages">
+            <h4>Find Us On Social</h4>
+            <div class="social-links">
+                <a href="" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" class="social-link" ><i class="fa-brands fa-x-twitter"></i></a>
+            </div>              
         </div>
     </footer>
 

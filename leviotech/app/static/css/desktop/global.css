@@ -240,6 +240,27 @@ main{
   color: white;
 }
 
+.social-pages{
+   background-color: #2b5f89;   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px 0;
+   color: white;
+   
+}
+
+.social-pages h4{
+  margin-top: 0;
+}
+.social-link i{
+  font-size: 25px;
+  margin: 5px;
+  color: white;
+}
+
+
 /* ===== LINKS SECTION ===== */
 /* .footer-links h4 {
   font-size: 1.1rem;

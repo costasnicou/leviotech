@@ -17,11 +17,12 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ post.title }}" />
-  <meta name="twitter:description" content="{{ post.content|striptags|truncatewords:25 }}" />
+  <meta name="twitter:title" content="{{ product.title }}" />
+  <meta name="twitter:description" content="{{ product.description|striptags|truncatewords:25 }}" />
   {% if  product.get_featured_image.image %}
     <meta name="twitter:image" content="{{ absolute_image_url }}" />
   {% endif %}
+  <meta name="twitter:site" content="@Leviotech">
 {% endblock %}
 
 

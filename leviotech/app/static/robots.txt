@@ -1,4 +1,4 @@
-# robots.txt for https://www.leviotech.com/
+# robots.txt for https://leviotech.com/
 
 User-agent: *
 Disallow: /admin/
@@ -6,4 +6,4 @@ Disallow: /static/
 Disallow: /media/
 Allow: /
 
-Sitemap: https://www.leviotech.com/sitemap.xml
+Sitemap: https://leviotech.com/sitemap.xml

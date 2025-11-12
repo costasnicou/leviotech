@@ -2,8 +2,8 @@
 
 User-agent: *
 Disallow: /admin/
-Disallow: /static/
-Disallow: /media/
+Allow: /static/
+Allow: /media/
 Allow: /
 
 Sitemap: https://leviotech.com/sitemap.xml

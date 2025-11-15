@@ -62,19 +62,19 @@ button.next { right: 20px; }
 
 
 .slide1{
-    background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider1.jpg');
+    background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider1.webp');
  background-size: cover;
   background-position: center;
 }
 
 .slide2{
- background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider2.jpg');
+ background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider2.webp');
  background-size: cover;
   background-position: center;
 }
 
 .slide3{
- background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider3.jpg');
+ background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider3.webp');
  background-size: cover;
   background-position: center;
 }

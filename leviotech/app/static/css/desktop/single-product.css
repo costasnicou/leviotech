@@ -197,3 +197,8 @@ font-size: 13px;
 .fa-brands.fa-linkedin{
     color: rgb(0, 119, 255);
 }
+
+
+.social-links .fa-brands.fa-linkedin {
+    color: white;
+}

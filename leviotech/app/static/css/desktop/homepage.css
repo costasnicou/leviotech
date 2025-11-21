@@ -490,7 +490,7 @@ font-weight: 300;
 }
 
 .tabbed-view-more{
-  color: #007BFF;
+  color: #5994c4;
   text-decoration: none;
   margin: 20px 0;
   display: inline-block;
@@ -498,7 +498,8 @@ font-weight: 300;
 }
 
 .tabbed-view-more:hover{
-  color: #025ec0;
+ /* color: #5994c4; */
+ filter: brightness(80%);
   
 }
 

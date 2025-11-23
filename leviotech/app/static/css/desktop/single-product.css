@@ -4,6 +4,8 @@
 
 .section-title.product-title{
     margin-bottom: 0;
+    border-bottom: none;
+    font-weight: 300;
 }
 .product-details{
     display: flex;

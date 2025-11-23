@@ -55,6 +55,10 @@
         padding: 10px;
     }
 
+    .featured-category-wraper {
+        height: unset;
+        width: 50%;
+    }
 
     .featured-category {
         flex: 0 0 auto; /* prevents items from shrinking */

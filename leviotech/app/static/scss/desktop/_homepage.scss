@@ -62,19 +62,19 @@ button.next { right: 20px; }
 
 
 .slide1{
-    background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider1.webp');
+    background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../imgs/slider1.webp');
  background-size: cover;
   background-position: center;
 }
 
 .slide2{
- background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider2.webp');
+ background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../imgs/slider2.webp');
  background-size: cover;
   background-position: center;
 }
 
 .slide3{
- background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../../imgs/slider3.webp');
+ background:linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(62, 62, 62, 0.3)), url('../imgs/slider3.webp');
  background-size: cover;
   background-position: center;
 }
@@ -185,11 +185,11 @@ hgroup{
 /* end featured categories */
 
 /* start featured products */
-.featured-products{
+.featured-products-hm{
   position: relative;
 }
 
-.featured-products > img{
+.featured-products-hm > img{
   width: 900px;
   height:800px;
   object-fit: contain;
@@ -200,16 +200,18 @@ hgroup{
   z-index: -10;
 }
 
-.featured-products-wraper{
+.featured-products-wraper-hm{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   
   /* flex-wrap: wrap; */
   /* flex-basis: 75%; */
+
+
 }
 
-.product{
+.product-hm{
   width: 250px;
   margin: 10px 20px;
   text-align: center;
@@ -221,8 +223,7 @@ hgroup{
   -moz-box-shadow: 10px 7px 35px 13px rgba(237,237,237,0.15);
   transition: all 0.4s ease-in;
 }
-
-.product:hover{
+.product-hm:hover{
   background-color: rgba(251, 253, 255, 0.51);
   transform: scale(1.02);
   
@@ -230,7 +231,7 @@ hgroup{
 
 
 
-.product-img{
+.product-img-hm{
   width: 200px;
   height: 150px;
   object-fit: contain; /* or contain */
@@ -238,7 +239,7 @@ hgroup{
   width:min-content; */
 }
 
-.product-title{
+.product-title-hm{
   height: 50px;
 }
 
@@ -260,7 +261,7 @@ hgroup{
       rgba(66, 112, 163, 0.617)
     ),
     /* bottom, image */
-    url(../../imgs/cta5.webp);
+    url(../imgs/cta5.webp);
   background-position: center;
   background-size: cover;
   
@@ -295,7 +296,7 @@ hgroup{
    position: relative;
    z-index: 1;
 }
-.product{
+.product-hm{
   position: relative;
 }
 .best-deal-promo {
@@ -311,27 +312,6 @@ hgroup{
     top: -5px;
 }
 
-.best-deals .left-bg-opacity{
-  width: 1000px;
-  height:900px;
-  object-fit: contain;
-  opacity: 0.06;
-  position: absolute;
-  top: 2.5%;
-  left: 2.5%;
-  z-index: -10;
-}
-
-.best-deals .right-bg-opacity{
-   width: 1000px;
-  height:900px;
-  object-fit: contain;
-  opacity: 0.06;
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  z-index: -10;
-}
 .best-deals-wrapper{
   display: flex;
   justify-content: center;
@@ -349,17 +329,17 @@ hgroup{
   /* background-color: #82b5da; */
 }
 
-.best-deals-left .product{
+.best-deals-left .product-hm{
   width: 35%;
   
   /* height: 200px; */
 }
 
-.best-deals-left .product .product-img{
+.best-deals-left .product-hm .product-img-hm{
   width: 100%;
 }
 
-.best-deals-left .product .product-title {
+.best-deals-left .product-hm .product-title-hm {
     height: 70px;
 }
 
@@ -371,16 +351,16 @@ hgroup{
 }
 
 
-.best-deals-center .product{
+.best-deals-center .product-hm{
   width: 90%;
 }
 
-.best-deals-center .product .product-img{
+.best-deals-center .product-hm .product-img-hm{
   width: 100%;
   height: 70%;
 }
 
-.best-deals-center .product .product-title{
+.best-deals-center .product-hm .product-title-hm{
 font-size: 20px;
 font-weight: 300;
 }
@@ -393,16 +373,16 @@ font-weight: 300;
   align-items: center;
 }
 
-.best-deals-right .product{
+.best-deals-right .product-hm{
   width: 35%;
   /* height: 200px; */
 }
 
-.best-deals-right .product .product-img{
+.best-deals-right .product-hm .product-img-hm{
   width: 100%;
 }
 
-.best-deals-right .product .product-title {
+.best-deals-right .product-hm .product-title-hm {
     height: 70px;
 }
 /* end best deals */

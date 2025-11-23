@@ -2,7 +2,7 @@
     height: 1000px;
 
 } */
- .beadcrumb{
+ .beadcrumb.beadcrumb-category{
   
    
     /* background-image: url(../../imgs/breadcrumb-category.jpg); */
@@ -14,7 +14,7 @@
       rgba(66, 112, 163, 0.617)
     ),
     /* bottom, image */
-    url(../../imgs/breadcrumb-category.webp);
+    url(../imgs/breadcrumb-category.webp);
     background-size: cover;
     background-position: center;
   

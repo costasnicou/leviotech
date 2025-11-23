@@ -1,4 +1,4 @@
-.beadcrumb{
+.beadcrumb.beadcrumb-legal{
    
     background-image: url();
      background: 
@@ -8,7 +8,7 @@
       rgba(66, 112, 163, 0.617)
     ),
     /* bottom, image */
-    url(../../imgs/breadcrumb-legal.jpg);
+    url(../imgs/breadcrumb-legal.webp);
     background-size: cover;
     background-position: center;
 }
@@ -22,4 +22,9 @@
 }
 .content p, .content li{
     font-size: 20px;
+    font-weight: 300;
+}
+
+.content h2{
+    font-weight: 300;
 }

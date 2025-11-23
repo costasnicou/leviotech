@@ -26,14 +26,6 @@
 {% endblock %}
 
 
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/desktop/single-product.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile/product.css' %}">
-    <link rel="stylesheet" href="{% static 'css/tablet/product.css' %}">
-    <link rel="stylesheet" href="{% static 'css/desktop-sm/product.css' %}">
-    <link rel="stylesheet" href="{% static 'css/desktop-lg/product.css' %}">  
-{% endblock %}
-
 {% block hero %}
    <div class="beadcrumb">
         <h1><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'category_detail' slug=product.category.slug %}">{{product.category}}</a> > <a href="{% url 'product_detail' slug=product.slug %}">{{product.title}}</a></h1>

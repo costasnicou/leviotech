@@ -30,17 +30,8 @@
 {% endblock metaseo %}
 
 
-
-{% block css %}
-   <link rel="stylesheet" href="{% static 'css/desktop/page.css' %}">
-   <link rel="stylesheet" href="{% static 'css/mobile/page.css' %}">
-   <link rel="stylesheet" href="{% static 'css/tablet/page.css' %}">
-   <link rel="stylesheet" href="{% static 'css/desktop-sm/page.css' %}">
-   <link rel="stylesheet" href="{% static 'css/desktop-lg/page.css' %}">
-{% endblock %}
-
 {% block hero %}
-   <div class="beadcrumb">
+   <div class="beadcrumb beadcrumb-legal">
         <h1><a href="{% url 'homepage' %}">Home</a> > <a href="{% url 'page_detail' slug=page.slug %}">{{page.title}}</a></h1>
    </div>
 

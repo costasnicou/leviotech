@@ -86,11 +86,11 @@
 
     /* featured products */
 
-    .featured-products > img {
+    .featured-products-hm > img {
         display: none;
     }
 
-    .product {
+    .product-hm {
         width: 180px;
         margin: 10px 20px;
         text-align: center;
@@ -103,7 +103,7 @@
         transition: all 0.4s ease-in;
     }
 
-    .featured-products .product .product-img {
+    .featured-products-hm .product-hm .product-img-hm {
         width: 180px;
         height: 150px;
         object-fit: contain;
@@ -148,12 +148,12 @@
         margin: 20px auto;
     }
 
-    .tab-wraper .product {
+    .tab-wraper .product-hm {
         color: black;
         width: 160px;
     }
 
-   .tab-wraper .product .product-img {
+   .tab-wraper .product-hm .product-img-hm {
         width: 160px;
         height: 150px;
         object-fit: contain;

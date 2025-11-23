@@ -1,0 +1,33 @@
+// import desktop styles
+@import "desktop/global";
+@import "desktop/homepage";
+@import "desktop/category";
+@import "desktop/single-product";
+@import "desktop/page";
+
+// import desktop-lg
+@import "desktop-lg/global";
+@import "desktop-lg/homepage";
+@import "desktop-lg/category";
+@import "desktop-lg/product";
+@import "desktop-lg/page";
+
+// import mobile
+@import "mobile/global";
+@import "mobile/homepage";
+@import "mobile/category";
+@import "mobile/product";
+@import "mobile/page";
+
+// import desktop-sm
+@import "desktop-sm/global";
+@import "desktop-sm/homepage";
+@import "desktop-sm/category";
+@import "desktop-sm/product";
+@import "desktop-sm/page";
+
+// import tablet
+@import "tablet/global";
+@import "tablet/homepage";
+@import "tablet/product";
+@import "tablet/page";

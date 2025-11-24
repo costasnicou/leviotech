@@ -35,33 +35,42 @@
 
 
 {% block hero %}
-    <div class="slider">
-        <div class="slides">
-            <div class="slide slide1 ">
-                <hgroup>
-                    <h1 class="heading">Gear & Accessories Built for Power and Precision</h1>
-                    <h2 class="sub-heading">Unlock peak performance with cutting-edge technology, and immersive gaming tools</h2>
-                </hgroup>
-            </div>
-
-            <div class="slide slide2" >
-                <hgroup>
-                    <h1 class="heading">Your Ultimate Destination for High-Performance Gaming Tech</h1>
-                    <h2 class="sub-heading">Find everything you need to upgrade your gaming world in one place</h2>
-                </hgroup>
-                
-            </div>
-            <div class="slide slide3" >
-                <hgroup>
-                    <h1 class="heading">Peripherals & Tech Engineered for Victory</h1>
-                    <h2 class="sub-heading">Experience ultra-fast response times, powerful graphics, and precision engineering</h2>
-                </hgroup>            
-            </div>
+    <div class="slider-wraper loading">
+    <!-- Loader overlay -->
+        <div class="slider-loader">
+            <div class="spinner"></div>
+            <p>Loading slider…</p>
         </div>
 
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide slide1 ">
+                    <hgroup>
+                        <h1 class="heading">Gear & Accessories Built for Power and Precision</h1>
+                        <h2 class="sub-heading">Unlock peak performance with cutting-edge technology, and immersive gaming tools</h2>
+                    </hgroup>
+                </div>
+
+                <div class="slide slide2" >
+                    <hgroup>
+                        <h1 class="heading">Your Ultimate Destination for High-Performance Gaming Tech</h1>
+                        <h2 class="sub-heading">Find everything you need to upgrade your gaming world in one place</h2>
+                    </hgroup>
+                    
+                </div>
+                <div class="slide slide3" >
+                    <hgroup>
+                        <h1 class="heading">Peripherals & Tech Engineered for Victory</h1>
+                        <h2 class="sub-heading">Experience ultra-fast response times, powerful graphics, and precision engineering</h2>
+                    </hgroup>            
+                </div>
+            </div>
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
     </div>
+ 
 
 {% endblock %}
 
@@ -290,6 +299,8 @@
 
 
 {% block scripts %}
-    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/slider-loader-bg.js' %}" defer></script>
+    <script src="{% static 'js/slider.js' %}" defer></script>
     <script src="{% static 'js/tabs.js' %}"></script>
+
 {% endblock %}

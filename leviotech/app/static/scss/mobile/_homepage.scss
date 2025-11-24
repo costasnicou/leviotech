@@ -18,6 +18,29 @@
         border-bottom: unset;
     }
 
+    .slider-loader {
+        
+    
+       border-radius: unset;
+        width: 100%;
+        height: 60vh;
+        margin-top: 172px;
+    }
+
+    .slide1{
+        background-image: url(../imgs/slider1-mob.webp);
+    }
+
+    .slide2{
+        background-image: url(../imgs/slider2-mob.webp);
+    }
+
+    .slide3{
+        background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../imgs/slider3-mob.webp);
+        // filter: brightness(70%);
+    }
+
+
      .heading {
         font-size: 30px;
         /* padding: 10px; */

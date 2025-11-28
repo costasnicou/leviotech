@@ -19,6 +19,10 @@
 
     {% endblock %}
 
+    {% block preload %}
+
+    {% endblock %}
+
 </head>
 <body>
     <header>
@@ -78,7 +82,7 @@
         <div class="site-footer">
             <div class="footer-about">
                 <div class="logo">
-                    <img class="logo-img" src="{% static 'imgs/logo-footer-tagline.webp' %}" alt="">
+                    <img class="logo-img" src="{% static 'imgs/logo-footer-tagline.webp' %}" alt="leviotech footer logo" loading="lazy">
                 </div>
                 <p>Leviotech brings you the best gaming tech — deals, and top Amazon picks.</p>
             
